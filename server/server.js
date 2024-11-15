@@ -36,9 +36,9 @@ const startApolloServer = async () => {
   server.applyMiddleware({ app }); // Apply Apollo middleware to the Express app
 
   // Fallback route to serve React frontend in production
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
+  //app.get('*', (req, res) => {
+   // res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  //});
 
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
