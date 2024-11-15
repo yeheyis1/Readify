@@ -27,10 +27,10 @@ const startApolloServer = async () => {
     context: authMiddleware, // Use authMiddleware to set context
   });
 
-  const client = new ApolloClient({
-    uri: '/graphql',  // Ensure this matches the endpoint in `server.js`
-    cache: new InMemoryCache(),
-  });
+  //const client = new ApolloClient({
+   // uri: '/graphql',  // Ensure this matches the endpoint in `server.js`
+   // cache: new InMemoryCache(),
+  //});
 
   await server.start(); // Start Apollo Server
   server.applyMiddleware({ app }); // Apply Apollo middleware to the Express app
